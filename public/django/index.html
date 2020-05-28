@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+Django 基本操作命令
+</title>
+
+    
+
+
+  
+  <meta name="author" content="" />
+  <meta name="description" content="世界上最宝贵的财富就是时间，所以不要浪费一分一秒！" />
+
+
+
+<meta name="generator" content="Hugo 0.68.3" />
+
+<link rel="canonical" href="/django/" />
+
+
+<meta property="og:title" content="Django 基本操作命令" />
+<meta property="og:description" content="Django基本操作命令 1、新建一个django项目 django-admin.py startproject project-name(项目名) 2、新建一个app python manage.py startapp app-name(app名) 3、同步数据库（数据库迁移） python manage.py syncdb 注意：Django 1.7.1及以上的版本需要用以下命令 python manage.py makemigrations python manage.py migrate 这种方法可以创建表，当你在models.py中新增了类时，运行它就可以自动在数据库中创建表了，不用手动创建。 备注：对已有的 models 进行修改，Django 1.7之前的版本的Django都是无法自动更改表结构的，不过有第三方工具south
+4、运行命令 python manage.py runserver 5、清空数据库 python manage.py flush 此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表。
+6、创建超级管理员 python manage.py createsuperuser 7、导出数据、导入数据 python manage.py dumpdata appname &gt; appname.json python manage.py loaddata appname.json 8、django项目环境终端 python manage.py shell 如果你安装了bpython或者ipython，会自动调用他们的界面
+9、数据库执行命令 python manage.py dbshell django会进行到settings中设置的数据库，如果是mysql或者postgresql，会要求输入用户名和密码
+在这个终端可以输入sql语句
+10、更多命令 在终端上输入python manage." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/django/" />
+<meta property="article:published_time" content="2020-04-22T15:29:10+08:00" />
+<meta property="article:modified_time" content="2020-04-22T15:29:10+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Django 基本操作命令"/>
+<meta name="twitter:description" content="Django基本操作命令 1、新建一个django项目 django-admin.py startproject project-name(项目名) 2、新建一个app python manage.py startapp app-name(app名) 3、同步数据库（数据库迁移） python manage.py syncdb 注意：Django 1.7.1及以上的版本需要用以下命令 python manage.py makemigrations python manage.py migrate 这种方法可以创建表，当你在models.py中新增了类时，运行它就可以自动在数据库中创建表了，不用手动创建。 备注：对已有的 models 进行修改，Django 1.7之前的版本的Django都是无法自动更改表结构的，不过有第三方工具south
+4、运行命令 python manage.py runserver 5、清空数据库 python manage.py flush 此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表。
+6、创建超级管理员 python manage.py createsuperuser 7、导出数据、导入数据 python manage.py dumpdata appname &gt; appname.json python manage.py loaddata appname.json 8、django项目环境终端 python manage.py shell 如果你安装了bpython或者ipython，会自动调用他们的界面
+9、数据库执行命令 python manage.py dbshell django会进行到settings中设置的数据库，如果是mysql或者postgresql，会要求输入用户名和密码
+在这个终端可以输入sql语句
+10、更多命令 在终端上输入python manage."/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+
+
+
+  </head>
+
+  
+  <body>
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = '\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          Django 基本操作命令
+          <div class="sub header">@  · Wednesday, Apr 22, 2020 · 1 minute read · Update at Apr 22, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><h2 id="django基本操作命令">Django基本操作命令</h2>
+<h4 id="1新建一个django项目">1、新建一个django项目</h4>
+<pre><code>django-admin.py startproject project-name(项目名)
+</code></pre><h4 id="2新建一个app">2、新建一个app</h4>
+<pre><code>python manage.py startapp app-name(app名)
+</code></pre><h4 id="3同步数据库数据库迁移">3、同步数据库（数据库迁移）</h4>
+<pre><code>python manage.py syncdb
+
+注意：Django 1.7.1及以上的版本需要用以下命令
+python manage.py makemigrations
+python manage.py migrate
+</code></pre><p>这种方法可以创建表，当你在models.py中新增了类时，运行它就可以自动在数据库中创建表了，不用手动创建。
+备注：对已有的 models 进行修改，Django 1.7之前的版本的Django都是无法自动更改表结构的，不过有第三方工具south</p>
+<h4 id="4运行命令">4、运行命令</h4>
+<pre><code>python manage.py runserver 
+</code></pre><h4 id="5清空数据库">5、清空数据库</h4>
+<pre><code>python manage.py flush
+</code></pre><p>此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表。</p>
+<h4 id="6创建超级管理员">6、创建超级管理员</h4>
+<pre><code>python manage.py createsuperuser
+</code></pre><h4 id="7导出数据导入数据">7、导出数据、导入数据</h4>
+<pre><code>python manage.py dumpdata appname &gt; appname.json
+python manage.py loaddata appname.json
+</code></pre><h4 id="8django项目环境终端">8、django项目环境终端</h4>
+<pre><code>python manage.py shell
+</code></pre><p>如果你安装了bpython或者ipython，会自动调用他们的界面</p>
+<h4 id="9数据库执行命令">9、数据库执行命令</h4>
+<pre><code>python manage.py dbshell
+</code></pre><p>django会进行到settings中设置的数据库，如果是mysql或者postgresql，会要求输入用户名和密码</p>
+<p>在这个终端可以输入sql语句</p>
+<h4 id="10更多命令">10、更多命令</h4>
+<p>在终端上输入python manage.py 回车，就可以看到详细的列表</p>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+          <a class="ui label">No Tags</a>
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+    </div>
+
+    <h1 class="ui medium header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    </h1>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2020 我的博客</p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = '\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>

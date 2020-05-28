@@ -1,0 +1,20 @@
+#baseURL = "/hugoblog/"
+baseURL = "/"
+languageCode = "en-us"
+title = "我的博客"
+
+# 指定主题
+#theme = "hyde"
+theme = "hugos"
+
+
+
+[params]
+#博客简介
+description = "世界上最宝贵的财富就是时间，所以不要浪费一分一秒！"
+#博客主题颜色
+themeColor = "theme-base-08"
+
+
+
+

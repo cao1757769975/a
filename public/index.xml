@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>我的博客</title>
+    <link>/</link>
+    <description>Recent content on 我的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 May 2020 16:37:15 +0800</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>软件测试基础</title>
+      <link>/cs1/</link>
+      <pubDate>Thu, 28 May 2020 16:37:15 +0800</pubDate>
+      
+      <guid>/cs1/</guid>
+      <description>软件测试定义 狭义：测试的定义：“程序测试是为了发现错误而执行程序的过程”。这个定义，被业界所认可，经常被引用。
+广义：为了更早地发现问题，所以将测试延伸到需求评审、设计审查活动中去，也就是将“软件质量保证”的部分活动归为测试活动。实际上，在软件开发实际操作中，常常将软件测试和质量保证——这两种努力（efforts）合并起来。延伸后的软件测试，被认为是一种软件测试的广义概念。
+软件测试的定义：软件测试是贯穿整个软件开发生命周期、对软件产品（包括阶段性产品）进行验证和确认的活动过程，其目的是尽快尽早地发现在软件产品中所存在的各种问题——与用户需求、预先定义的不一致性。 软件开发的生命周期： 1.客户提出需求(概念) 2.根据客户的需求写出相对的&amp;lt;&amp;lt;需求文档&amp;gt;&amp;gt; 3.前端设计效果图(原型图) 后台开发人员设计与编写代码实现功能 测试人员也会根据需求文档编写测试计划和测试用例 4.在后台开发实现功能后根据测试用例测试人员进行测试。 5.开发完全结束后测试人员进行整体测试，全面测试。测试成功后进入上线 6.软件上线后根据用户体验和实际效果进行小版本的迭代。 测试流程： 1.在立项会上根据客户需求编写需求文档/规格说明书，ui设计原型图后台编码，测试人员编写测试计划和测试用例 2.随着开发的代码实现测试进行测试评审 3.主要代码实现后测试人员先进行冒烟测试 4.代码实现后测试执行测试用例 5.根据执行的结果进行对应bug提交给相对应的开发人员让其修改代码 6.开发修改后测试人员进行回归测试 7.直至项目上线后 测试人员编写测试总结用于下一个版本的迭代
+软件测试的分类： 1.按阶段划分： a.单元测试 对一个模块测试
+b.集成测试 对多个模块测试(有一定的关联) c.系统测试 在软件编译后执行的整体测试 d.验收测试 对软件执行后的用户体验的测试
+α 阿尔法测试 有一定的开发测试人员的测试 内测
+β 贝塔测试 只有用户参与的测试 公测
+2.按是否运行程序划分; a.静态测试 UI设计图 b.动态测试 有执行代码过程中产生的问题 3.是否查看源代码方式划分; a.黑盒测试 不看源代码结构 只关心外观和能否输入输出以及响应时间 功能测试	界面 安装 兼容 易用 性能测试	压力测试 负载测试 一般性能 稳定性测试 压力测试： 在同一时间内进行多个用户的访问 负载测试： 在多个用户在一段时间的持续访问 冒烟测试： 在这个软件中主要的功能实现后进行测试 回归测试： 在开发人员修改后进行的同一个问题的测试 随机测试： 是指测试中所有的输入数据都是随机生成的 b.白盒测试 只看代码结构以及代码实现方式 c.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 的基本使用</title>
+      <link>/selenium/</link>
+      <pubDate>Thu, 28 May 2020 15:59:13 +0800</pubDate>
+      
+      <guid>/selenium/</guid>
+      <description>什么是selenium selenium 是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。支持的浏览器包括IE（7, 8, 9, 10, 11），Mozilla Firefox，Safari，Google Chrome，Opera等。selenium 是一套完整的web应用程序测试系统，包含了测试的录制（selenium IDE）,编写及运行（Selenium Remote Control）和测试的并行处理（Selenium Grid）。 Selenium的核心Selenium Core基于JsUnit，完全由JavaScript编写，因此可以用于任何支持JavaScript的浏览器上。 selenium可以模拟真实浏览器，自动化测试工具，支持多种浏览器，爬虫中主要用来解决JavaScript渲染问题。 这里要说一下比较重要的PhantomJS,PhantomJS是一个而基于WebKit的服务端JavaScript API,支持Web而不需要浏览器支持，其快速、原生支持各种Web标准：Dom处理，CSS选择器，JSON等等。PhantomJS可以用用于页面自动化、网络监测、网页截屏，以及无界面测试
+selenium的基本用法： 声明浏览器对象 上面我们知道了selenium支持很多的浏览器:
+但是如果想要声明并调用浏览器则需要：
+from selenium import webdriver browser = webdriver.Chrome() browser = webdriver.Firefox() 这里只写了两个例子，当然了其他的支持的浏览器都可以通过这种方式调用
+访问页面
+from selenium import webdriver#导入库 browser = webdriver.Chrome()#声明浏览器 url = &#39;https:www.baidu.com&#39; browser.get(url)#打开浏览器预设网址 print(browser.page_source)#打印网页源代码 browser.close()#关闭浏览器 上述代码运行后，会自动打开Chrome浏览器，并登陆百度打印百度首页的源代码，然后关闭浏览器
+查找元素 单个元素查找 from selenium import webdriver#导入库 browser = webdriver.Chrome()#声明浏览器 url = &#39;https:www.taobao.com&#39; browser.get(url)#打开浏览器预设网址 input_first = browser.find_element_by_id(&#39;q&#39;) input_two = browser.find_element_by_css_selector(&#39;#q&#39;) print(input_first) print(input_two) 这里我们通过2种不同的方式去获取响应的元素，第一种是通过id的方式，第二个中是CSS选择器，结果都是相同的。 输出如下：</description>
+    </item>
+    
+    <item>
+      <title>Go - 环境安装</title>
+      <link>/go/</link>
+      <pubDate>Sun, 26 Apr 2020 15:30:09 +0800</pubDate>
+      
+      <guid>/go/</guid>
+      <description>你好，Go语言 Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。 因工作需要，准备入坑，先从环境安装开始，输出一个 Hello World。
+环境安装 目标
+安装完成并运行 Hello World 成功！ 本机系统：macOS High Sierra 10.13.4 Go 版本：1.12 方式一： 通过 brew 安装
+brew install 根据提示进行安装吧，我使用的 方式二 进行安装的。
+方式二： 通过安装包安装
+地址：https://dl.google.com/go/go1.12.darwin-amd64.pkg
+下载之后直接点击安装，一步步继续即可。
+配置环境变量
+vi ~/.bashrc	//新增	export GOROOT=/usr/local/go	export GOPATH=/Users/username/go/code //代码目录，自定义即可	export PATH=$PATH:$GOPATH/bin 及时生效，请执行命令：source ~/.bashrc
+如果命令行使用的是zsh，请修改 .zshrc 文件。
+vi ~/.zshrc	//新增	export GOROOT=/usr/local/go	export GOPATH=/Users/username/go/code //自定义代码目录	export PATH=$PATH:$GOPATH/bin 及时生效，请执行命令：source ~/.zshrc
+验证是否安装成功，命令行下执行：
+目录结构 bin
+存放编译后可执行的文件。
+pkg
+存放编译后的应用包。
+src
+存放应用源代码。
+例如：
+├─ code -- 代码根目录	│ ├─ bin	│ ├─ pkg	│ ├─ src	│ ├── hello	│ ├── hello.</description>
+    </item>
+    
+    <item>
+      <title>如何快速创建 Vue</title>
+      <link>/vue/</link>
+      <pubDate>Wed, 22 Apr 2020 15:35:30 +0800</pubDate>
+      
+      <guid>/vue/</guid>
+      <description>vue创建项目（npm安装→初始化项目） 第一步npm安装 首先：先从nodejs.org中下载nodejs 双击安装，在安装界面一直Next 直到Finish完成安装。
+打开控制命令行程序（CMD）,检查是否正常 使用淘宝NPM 镜像 大家都知道国内直接使用npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。
+$ npm install -g cnpm --registry=https://registry.npm.taobao.org 这样就可以使用cnpm 命令来安装模块了：
+第二步项目初始化 1.第一步：安装vue-cli cnpm install vue-cli -g //全局安装 vue-cli
+查看vue-cli是否成功，不能检查vue-cli,需要检查vue
+选定路径，新建vue项目，这里我是在桌面上新建了sun文件夹，cd目录路径
+下面我一项目名为sell新建vue项目
+vue init webpack ”项目名称“ 现在已经创建好了，那就让项目先安装下依赖再运行一下，会出现下面的页面，操作指令是：
+cnpm install cnpm run dev 注意 这里要在sell下进行安装和运行哦!!!
+进入网址，如下图： 恭喜安装成功了哦！！！
+利用vue-cil初始化构建vue项目，我们会获得一个初始化的文件夹结构，如下： 下面开始进入你的vue之旅吧！！</description>
+    </item>
+    
+    <item>
+      <title>Django 基本操作命令</title>
+      <link>/django/</link>
+      <pubDate>Wed, 22 Apr 2020 15:29:10 +0800</pubDate>
+      
+      <guid>/django/</guid>
+      <description>Django基本操作命令 1、新建一个django项目 django-admin.py startproject project-name(项目名) 2、新建一个app python manage.py startapp app-name(app名) 3、同步数据库（数据库迁移） python manage.py syncdb 注意：Django 1.7.1及以上的版本需要用以下命令 python manage.py makemigrations python manage.py migrate 这种方法可以创建表，当你在models.py中新增了类时，运行它就可以自动在数据库中创建表了，不用手动创建。 备注：对已有的 models 进行修改，Django 1.7之前的版本的Django都是无法自动更改表结构的，不过有第三方工具south
+4、运行命令 python manage.py runserver 5、清空数据库 python manage.py flush 此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表。
+6、创建超级管理员 python manage.py createsuperuser 7、导出数据、导入数据 python manage.py dumpdata appname &amp;gt; appname.json python manage.py loaddata appname.json 8、django项目环境终端 python manage.py shell 如果你安装了bpython或者ipython，会自动调用他们的界面
+9、数据库执行命令 python manage.py dbshell django会进行到settings中设置的数据库，如果是mysql或者postgresql，会要求输入用户名和密码
+在这个终端可以输入sql语句
+10、更多命令 在终端上输入python manage.</description>
+    </item>
+    
+    <item>
+      <title>关于爬虫</title>
+      <link>/two/</link>
+      <pubDate>Fri, 03 Apr 2020 14:44:50 +0800</pubDate>
+      
+      <guid>/two/</guid>
+      <description>爬虫简介 1. 爬虫概念 爬虫，又称网页蜘蛛或网络机器人。 爬虫是 模拟人操作客户端(浏览器，APP) 向服务器发起网络请求 抓取数据的自动化程序或脚本 说明： 1.模拟：用爬虫程序伪装出人的行为，避免被服务器识别为爬虫 2.客户端：浏览器，APP都可以实现人与服务器之间交互行为，应用客户端从服务器获取数据 3.自动化：数据量较小的时候可以人工获取，但往往在公司中爬取量在百万、千万条的所以程序要自动化
+爬虫语言：PHP, C/C++, Java, python, GOLang 对比： PHP：并发能力差，对多进程和多线程，数据量较大爬虫效率较低 C/C++：语言效率高，但学习成本高，对程序员的技术能力要求较高，所以目前还停留在研究层面，市场需求小 Java：python爬虫的主要竞争对手，但由于Java语言特点，代码臃肿，代码量大，维护成本重构成本高，开发效率底，但目前市场上岗位需求比较旺盛 python：语法简单，学习成本低，对新手比较友好，python语言良好的生态，大量库和框架的支持是的python爬虫目前处于爬虫圈的主导地位
+2.爬虫分类 1.通用爬虫：（搜索引擎） 实列：百度、搜狗、Google的搜索引擎 功能：访问网页 -&amp;gt; 抓取数据 -&amp;gt; 数据处理 -&amp;gt; 提供检索服务 工作流： 1.给定一个起始url，存于爬取列队中 2.爬虫程序从队列中取出url，爬取数据 3.解析爬取数据，获取网页内所有URL，放入爬取队列 4.重复第二个步骤 使搜索引擎获取网站链接： 1.主动将URL提交给搜索引擎（https://ziyuan.baidu.com/linksubmit/url） 2.在其他热门网站设置友情链接 3.百度和DNS服务商合作，收录新网站 网站排名（SEO）： 1.根据PageRank值进行排名（流量、点击率） 2.百度竞价排名，钱多就靠前 缺点： 1.抓取内容多数无用 2.无法精准获取数据 协议： robots协议 &amp;ndash;&amp;gt; 约定那些内容允许哪些爬虫抓取 1.无需遵守，该协议适用于通用爬虫，而我们写的是聚焦爬虫 2.查看方法：网站url/robots.txt， 如https://www.baidu.com/robots.txt
+2.聚焦爬虫 概念：聚焦爬虫指针对某一领域根据特定的要求实现爬虫程序，住区需要的数据(垂直爬虫) 设计思路： (1).确定URL， 模拟浏览器向服务器发送请求 (2).获取响应数据并进行数据解析 (3).讲目标数据持久化到本地</description>
+    </item>
+    
+    <item>
+      <title>使用Hugo搭建静态站点</title>
+      <link>/one/</link>
+      <pubDate>Fri, 03 Apr 2020 14:28:28 +0800</pubDate>
+      
+      <guid>/one/</guid>
+      <description>一、安装Hugo Hugo托管在github.com上，因此获取Hugo很方面，目前有至少两种方法可以安装Hugo。
+1、安装包 对于普通用户（无git、无开发经验）而言，直接下载安装包是最简单的方式。我们可以下载Hugo的Release版，截至目前为止最新版本是v0.14，可以在这里下载你的平台(支持linux, windows, darwin, netbsd, freebsd和arm等)对应的版本。不过我发现0.14版本似乎有Bug，在我的MacOsX上生成Hugo Docs站点总是panic。
+2、源码编译 对于开发者而言，源码编译是最Geek的方式:
+go get -u -v github.com/spf13/hugo go build -o hugo main.go mv hugo $GOPATH/bin 在命令行下执行hugo命令，如果得到类似下面结果，则说明你已经成功安装了Hugo：
+$hugo version Hugo Static Site Generator v0.15-DEV BuildDate: 2015-09-20T23:53:39+08:00 二、生成静态站点 1、创建静态站点 我们来创建一个名为”tonybai.com”的静态站点：
+$hugo new site tonybai.com $tree . └── tonybai.com ├── archetypes ├── config.toml ├── content ├── data ├── layouts └── static 我们看到，通过hugo new site命令，我们建立了tonybai.com站点的后台目录结构。但细心的你会发现：这里的目录都是空的。除了config.toml中可怜的三行内容：
+baseurl = &amp;quot;http://replace-this-with-your-hugo-site.com/&amp;quot; languageCode = &amp;quot;en-us&amp;quot; title = &amp;quot;My New Hugo Site&amp;quot; 不过即便目录为空，这也是一个完整的静态站点源文件，我们可以基于这些文件生成我们的站点。 可以启动一下服务&amp;rsquo;hugo server&amp;rsquo;</description>
+    </item>
+    
+  </channel>
+</rss>

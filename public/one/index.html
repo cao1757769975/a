@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+使用Hugo搭建静态站点
+</title>
+
+    
+
+
+  
+  <meta name="author" content="" />
+  <meta name="description" content="世界上最宝贵的财富就是时间，所以不要浪费一分一秒！" />
+
+
+
+<meta name="generator" content="Hugo 0.68.3" />
+
+<link rel="canonical" href="/one/" />
+
+
+<meta property="og:title" content="使用Hugo搭建静态站点" />
+<meta property="og:description" content="一、安装Hugo Hugo托管在github.com上，因此获取Hugo很方面，目前有至少两种方法可以安装Hugo。
+1、安装包 对于普通用户（无git、无开发经验）而言，直接下载安装包是最简单的方式。我们可以下载Hugo的Release版，截至目前为止最新版本是v0.14，可以在这里下载你的平台(支持linux, windows, darwin, netbsd, freebsd和arm等)对应的版本。不过我发现0.14版本似乎有Bug，在我的MacOsX上生成Hugo Docs站点总是panic。
+2、源码编译 对于开发者而言，源码编译是最Geek的方式:
+go get -u -v github.com/spf13/hugo go build -o hugo main.go mv hugo $GOPATH/bin 在命令行下执行hugo命令，如果得到类似下面结果，则说明你已经成功安装了Hugo：
+$hugo version Hugo Static Site Generator v0.15-DEV BuildDate: 2015-09-20T23:53:39&#43;08:00 二、生成静态站点 1、创建静态站点 我们来创建一个名为”tonybai.com”的静态站点：
+$hugo new site tonybai.com $tree . └── tonybai.com ├── archetypes ├── config.toml ├── content ├── data ├── layouts └── static 我们看到，通过hugo new site命令，我们建立了tonybai.com站点的后台目录结构。但细心的你会发现：这里的目录都是空的。除了config.toml中可怜的三行内容：
+baseurl = &quot;http://replace-this-with-your-hugo-site.com/&quot; languageCode = &quot;en-us&quot; title = &quot;My New Hugo Site&quot; 不过即便目录为空，这也是一个完整的静态站点源文件，我们可以基于这些文件生成我们的站点。 可以启动一下服务&rsquo;hugo server&rsquo;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/one/" />
+<meta property="article:published_time" content="2020-04-03T14:28:28+08:00" />
+<meta property="article:modified_time" content="2020-04-03T14:28:28+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用Hugo搭建静态站点"/>
+<meta name="twitter:description" content="一、安装Hugo Hugo托管在github.com上，因此获取Hugo很方面，目前有至少两种方法可以安装Hugo。
+1、安装包 对于普通用户（无git、无开发经验）而言，直接下载安装包是最简单的方式。我们可以下载Hugo的Release版，截至目前为止最新版本是v0.14，可以在这里下载你的平台(支持linux, windows, darwin, netbsd, freebsd和arm等)对应的版本。不过我发现0.14版本似乎有Bug，在我的MacOsX上生成Hugo Docs站点总是panic。
+2、源码编译 对于开发者而言，源码编译是最Geek的方式:
+go get -u -v github.com/spf13/hugo go build -o hugo main.go mv hugo $GOPATH/bin 在命令行下执行hugo命令，如果得到类似下面结果，则说明你已经成功安装了Hugo：
+$hugo version Hugo Static Site Generator v0.15-DEV BuildDate: 2015-09-20T23:53:39&#43;08:00 二、生成静态站点 1、创建静态站点 我们来创建一个名为”tonybai.com”的静态站点：
+$hugo new site tonybai.com $tree . └── tonybai.com ├── archetypes ├── config.toml ├── content ├── data ├── layouts └── static 我们看到，通过hugo new site命令，我们建立了tonybai.com站点的后台目录结构。但细心的你会发现：这里的目录都是空的。除了config.toml中可怜的三行内容：
+baseurl = &quot;http://replace-this-with-your-hugo-site.com/&quot; languageCode = &quot;en-us&quot; title = &quot;My New Hugo Site&quot; 不过即便目录为空，这也是一个完整的静态站点源文件，我们可以基于这些文件生成我们的站点。 可以启动一下服务&rsquo;hugo server&rsquo;"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+
+
+
+  </head>
+
+  
+  <body>
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = '\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          使用Hugo搭建静态站点
+          <div class="sub header">@  · Friday, Apr 3, 2020 · 1 minute read · Update at Apr 3, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><h3 id="一安装hugo">一、安装Hugo</h3>
+<p>Hugo托管在github.com上，因此获取Hugo很方面，目前有至少两种方法可以安装Hugo。</p>
+<h4 id="1安装包">1、安装包</h4>
+<p>对于普通用户（无git、无开发经验）而言，直接下载安装包是最简单的方式。我们可以下载Hugo的Release版，截至目前为止最新版本是v0.14，可以在这里下载你的平台(支持linux, windows, darwin, netbsd, freebsd和arm等)对应的版本。不过我发现0.14版本似乎有Bug，在我的MacOsX上生成Hugo Docs站点总是panic。</p>
+<h4 id="2源码编译">2、源码编译</h4>
+<p>对于开发者而言，源码编译是最Geek的方式:</p>
+<pre><code>go get -u -v github.com/spf13/hugo
+go build -o hugo main.go
+mv hugo $GOPATH/bin
+
+</code></pre><p>在命令行下执行hugo命令，如果得到类似下面结果，则说明你已经成功安装了Hugo：</p>
+<pre><code>$hugo version
+Hugo Static Site Generator v0.15-DEV BuildDate: 2015-09-20T23:53:39+08:00
+</code></pre><h3 id="二生成静态站点">二、生成静态站点</h3>
+<h4 id="1创建静态站点">1、创建静态站点</h4>
+<p>我们来创建一个名为”tonybai.com”的静态站点：</p>
+<pre><code>$hugo new site tonybai.com
+$tree
+.
+└── tonybai.com
+    ├── archetypes
+    ├── config.toml
+    ├── content
+    ├── data
+    ├── layouts
+    └── static
+</code></pre><p>我们看到，通过hugo new site命令，我们建立了tonybai.com站点的后台目录结构。但细心的你会发现：这里的目录都是空的。除了config.toml中可怜的三行内容：</p>
+<pre><code>baseurl = &quot;http://replace-this-with-your-hugo-site.com/&quot;
+languageCode = &quot;en-us&quot;
+title = &quot;My New Hugo Site&quot;
+</code></pre><p>不过即便目录为空，这也是一个完整的静态站点源文件，我们可以基于这些文件生成我们的站点。 可以启动一下服务&rsquo;hugo server&rsquo;</p>
+<pre><code>$cd tonybai.com
+$hugo server
+
+0 draft content
+0 future content
+0 pages created
+0 paginator pages created
+0 tags created
+0 categories created
+in 6 ms
+Serving pages from /Users/tony/test/hugotest/tonybai.com/public
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre><p>之后Hugo启动了一个server作为该Site的Web Server。通过浏览器访问http://localhost:1313，你将看到一个完全空白的站点首页。</p>
+<h4 id="2添加theme">2、添加Theme</h4>
+<p>添加了Theme后的站点才有血有肉，丰富多彩。</p>
+<p>添加Theme的步骤如下，我们以Hyde Theme为例：</p>
+<p>首先创建themes目录，并下载Hyde Theme文件：</p>
+<pre><code>$ mkdir themes
+$ cd themes
+$ git clone https://github.com/spf13/hyde.git
+</code></pre><p>接下来，我们需要对Site进行一些配置，tonybai.com/config.toml是Site的顶层配置文件，配置后的config.toml文件如下：</p>
+<pre><code>baseurl = &quot;http://tonybai.com/&quot;
+languageCode = &quot;en-us&quot;
+title = &quot;Tony Bai&quot;
+theme = &quot;hyde&quot;
+
+[params]
+    description = &quot;这里是我的个人博客&quot;
+    themeColor = &quot;theme-base-08&quot; # for hyde theme
+</code></pre><p>其中：
+theme = “hyde” 指定站点使用Hyde主题；
+themeColor = “theme-base-08″ 指定了站点的主题颜色（默认是黑色的，这里改成一种红色）</p>
+<p>在tonybai.com目录下重新执行hugo server，并打开浏览器查看站点首页，你会发现视野里有内容了：</p>
+<p><img src="/hugoblog/boke.jpg" alt="展示图"></p>
+<h4 id="3第一个post">3、第一个Post</h4>
+<p>结构和样式有了，我们还没有内容。我们来创建站点的第一个Post：</p>
+<pre><code>$hugo new welcome.md
+/Users/tony/Test/hugotest/tonybai.com/content/welcome.md created
+</code></pre><p>hugo在content下创建welcome.md文件，我们编写一些文件内容：</p>
+<pre><code>+++
+Categories = [&quot;Development&quot;, &quot;GoLang&quot;]
+Description = &quot;&quot;
+Tags = [&quot;Development&quot;, &quot;golang&quot;]
+date = &quot;2015-09-23T16:30:37+08:00&quot;
+menu = &quot;main&quot;
+title = &quot;你好，Hugo&quot;
+
++++
+
+这是使用Hugo创建的站点中的第一篇文章。
+</code></pre><p>保存后，重新执行hugo server命令，打开浏览器，你将看到下面的情形：</p>
+<p><img src="/hugoblog/lct.jpg" alt="展示图"></p>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+          <a class="ui label">No Tags</a>
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+    </div>
+
+    <h1 class="ui medium header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    </h1>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2020 我的博客</p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = '\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>

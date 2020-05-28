@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+Go - 环境安装
+</title>
+
+    
+
+
+  
+  <meta name="author" content="" />
+  <meta name="description" content="世界上最宝贵的财富就是时间，所以不要浪费一分一秒！" />
+
+
+
+<meta name="generator" content="Hugo 0.68.3" />
+
+<link rel="canonical" href="/go/" />
+
+
+<meta property="og:title" content="Go - 环境安装" />
+<meta property="og:description" content="你好，Go语言 Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。 因工作需要，准备入坑，先从环境安装开始，输出一个 Hello World。
+环境安装 目标
+安装完成并运行 Hello World 成功！ 本机系统：macOS High Sierra 10.13.4 Go 版本：1.12 方式一： 通过 brew 安装
+brew install 根据提示进行安装吧，我使用的 方式二 进行安装的。
+方式二： 通过安装包安装
+地址：https://dl.google.com/go/go1.12.darwin-amd64.pkg
+下载之后直接点击安装，一步步继续即可。
+配置环境变量
+vi ~/.bashrc	//新增	export GOROOT=/usr/local/go	export GOPATH=/Users/username/go/code //代码目录，自定义即可	export PATH=$PATH:$GOPATH/bin 及时生效，请执行命令：source ~/.bashrc
+如果命令行使用的是zsh，请修改 .zshrc 文件。
+vi ~/.zshrc	//新增	export GOROOT=/usr/local/go	export GOPATH=/Users/username/go/code //自定义代码目录	export PATH=$PATH:$GOPATH/bin 及时生效，请执行命令：source ~/.zshrc
+验证是否安装成功，命令行下执行：
+目录结构 bin
+存放编译后可执行的文件。
+pkg
+存放编译后的应用包。
+src
+存放应用源代码。
+例如：
+├─ code -- 代码根目录	│ ├─ bin	│ ├─ pkg	│ ├─ src	│ ├── hello	│ ├── hello." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/go/" />
+<meta property="article:published_time" content="2020-04-26T15:30:09+08:00" />
+<meta property="article:modified_time" content="2020-04-26T15:30:09+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Go - 环境安装"/>
+<meta name="twitter:description" content="你好，Go语言 Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。 因工作需要，准备入坑，先从环境安装开始，输出一个 Hello World。
+环境安装 目标
+安装完成并运行 Hello World 成功！ 本机系统：macOS High Sierra 10.13.4 Go 版本：1.12 方式一： 通过 brew 安装
+brew install 根据提示进行安装吧，我使用的 方式二 进行安装的。
+方式二： 通过安装包安装
+地址：https://dl.google.com/go/go1.12.darwin-amd64.pkg
+下载之后直接点击安装，一步步继续即可。
+配置环境变量
+vi ~/.bashrc	//新增	export GOROOT=/usr/local/go	export GOPATH=/Users/username/go/code //代码目录，自定义即可	export PATH=$PATH:$GOPATH/bin 及时生效，请执行命令：source ~/.bashrc
+如果命令行使用的是zsh，请修改 .zshrc 文件。
+vi ~/.zshrc	//新增	export GOROOT=/usr/local/go	export GOPATH=/Users/username/go/code //自定义代码目录	export PATH=$PATH:$GOPATH/bin 及时生效，请执行命令：source ~/.zshrc
+验证是否安装成功，命令行下执行：
+目录结构 bin
+存放编译后可执行的文件。
+pkg
+存放编译后的应用包。
+src
+存放应用源代码。
+例如：
+├─ code -- 代码根目录	│ ├─ bin	│ ├─ pkg	│ ├─ src	│ ├── hello	│ ├── hello."/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+
+
+
+  </head>
+
+  
+  <body>
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = '\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          Go - 环境安装
+          <div class="sub header">@  · Sunday, Apr 26, 2020 · 1 minute read · Update at Apr 26, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><h2 id="你好go语言">你好，Go语言</h2>
+<pre><code>Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。
+</code></pre><p>因工作需要，准备入坑，先从环境安装开始，输出一个 Hello World。</p>
+<h2 id="环境安装">环境安装</h2>
+<p>目标</p>
+<pre><code>安装完成并运行 Hello World 成功！
+
+本机系统：macOS High Sierra 10.13.4
+
+Go 版本：1.12
+</code></pre><h4 id="方式一">方式一：</h4>
+<p>通过 brew 安装</p>
+<pre><code>brew install
+</code></pre><p>根据提示进行安装吧，我使用的 方式二 进行安装的。</p>
+<h4 id="方式二">方式二：</h4>
+<p>通过安装包安装</p>
+<p>地址：https://dl.google.com/go/go1.12.darwin-amd64.pkg</p>
+<p>下载之后直接点击安装，一步步继续即可。</p>
+<p>配置环境变量</p>
+<pre><code>vi ~/.bashrc	
+//新增	
+export GOROOT=/usr/local/go	
+export GOPATH=/Users/username/go/code //代码目录，自定义即可	
+export PATH=$PATH:$GOPATH/bin
+
+</code></pre><p>及时生效，请执行命令：source ~/.bashrc</p>
+<p>如果命令行使用的是zsh，请修改 .zshrc 文件。</p>
+<pre><code>vi ~/.zshrc	
+//新增	
+export GOROOT=/usr/local/go	
+export GOPATH=/Users/username/go/code //自定义代码目录	
+export PATH=$PATH:$GOPATH/bin
+</code></pre><p>及时生效，请执行命令：source ~/.zshrc</p>
+<p>验证是否安装成功，命令行下执行：</p>
+<p><img src="/hugoblog/go.jpg" alt="图2"></p>
+<p>目录结构
+bin</p>
+<p>存放编译后可执行的文件。</p>
+<p>pkg</p>
+<p>存放编译后的应用包。</p>
+<p>src</p>
+<p>存放应用源代码。</p>
+<p>例如：</p>
+<pre><code>├─ code  -- 代码根目录	
+│  ├─ bin	
+│  ├─ pkg	
+│  ├─ src	
+│     ├── hello	
+│         ├── hello.go
+
+</code></pre><p>Hello World 代码</p>
+<pre><code>//在 hello 目录下创建 hello.go	
+package main	
+import (	
+    &quot;fmt&quot;	
+)	
+func main() {	
+    fmt.Println(&quot;Hello World!&quot;)	
+}
+</code></pre><p>命令行执行：</p>
+<p><img src="/hugoblog/go1.jpg" alt="图2"></p>
+<h2 id="命令">命令</h2>
+<p>查看完整的命令：</p>
+<p><img src="/hugoblog/go3.jpg" alt="图2"></p>
+<p>go build hello</p>
+<p>在src目录或hello目录下执行 go build hello，只在对应当前目录下生成文件。</p>
+<p>go install hello</p>
+<p>在src目录或hello目录下执行 go install hello，会把编译好的结果移动到 $GOPATH/bin。</p>
+<p>go run hello</p>
+<p>在src目录或hello目录下执行 go run hello，不生成任何文件只运行程序。</p>
+<p>go fmt hello</p>
+<p>在src目录或hello目录下执行 go run hello，格式化代码，将代码修改成标准格式。</p>
+<p>其他命令，需要的时候再进行研究吧。</p>
+<p>开发工具</p>
+<p><img src="/hugoblog/go4.jpg" alt="图2"></p>
+<p>GoLand 是 JetBrains 公司推出的 Go 语言集成开发环境，与我们用的 WebStorm、PhpStorm、PyCharm 是一家，同样支持 Windows、Linux、macOS 等操作系统。</p>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+          <a class="ui label">No Tags</a>
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+    </div>
+
+    <h1 class="ui medium header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    </h1>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2020 我的博客</p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = '\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>

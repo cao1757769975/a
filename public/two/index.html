@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+关于爬虫
+</title>
+
+    
+
+
+  
+  <meta name="author" content="" />
+  <meta name="description" content="世界上最宝贵的财富就是时间，所以不要浪费一分一秒！" />
+
+
+
+<meta name="generator" content="Hugo 0.68.3" />
+
+<link rel="canonical" href="/two/" />
+
+
+<meta property="og:title" content="关于爬虫" />
+<meta property="og:description" content="爬虫简介 1. 爬虫概念 爬虫，又称网页蜘蛛或网络机器人。 爬虫是 模拟人操作客户端(浏览器，APP) 向服务器发起网络请求 抓取数据的自动化程序或脚本 说明： 1.模拟：用爬虫程序伪装出人的行为，避免被服务器识别为爬虫 2.客户端：浏览器，APP都可以实现人与服务器之间交互行为，应用客户端从服务器获取数据 3.自动化：数据量较小的时候可以人工获取，但往往在公司中爬取量在百万、千万条的所以程序要自动化
+爬虫语言：PHP, C/C&#43;&#43;, Java, python, GOLang 对比： PHP：并发能力差，对多进程和多线程，数据量较大爬虫效率较低 C/C&#43;&#43;：语言效率高，但学习成本高，对程序员的技术能力要求较高，所以目前还停留在研究层面，市场需求小 Java：python爬虫的主要竞争对手，但由于Java语言特点，代码臃肿，代码量大，维护成本重构成本高，开发效率底，但目前市场上岗位需求比较旺盛 python：语法简单，学习成本低，对新手比较友好，python语言良好的生态，大量库和框架的支持是的python爬虫目前处于爬虫圈的主导地位
+2.爬虫分类 1.通用爬虫：（搜索引擎） 实列：百度、搜狗、Google的搜索引擎 功能：访问网页 -&gt; 抓取数据 -&gt; 数据处理 -&gt; 提供检索服务 工作流： 1.给定一个起始url，存于爬取列队中 2.爬虫程序从队列中取出url，爬取数据 3.解析爬取数据，获取网页内所有URL，放入爬取队列 4.重复第二个步骤 使搜索引擎获取网站链接： 1.主动将URL提交给搜索引擎（https://ziyuan.baidu.com/linksubmit/url） 2.在其他热门网站设置友情链接 3.百度和DNS服务商合作，收录新网站 网站排名（SEO）： 1.根据PageRank值进行排名（流量、点击率） 2.百度竞价排名，钱多就靠前 缺点： 1.抓取内容多数无用 2.无法精准获取数据 协议： robots协议 &ndash;&gt; 约定那些内容允许哪些爬虫抓取 1.无需遵守，该协议适用于通用爬虫，而我们写的是聚焦爬虫 2.查看方法：网站url/robots.txt， 如https://www.baidu.com/robots.txt
+2.聚焦爬虫 概念：聚焦爬虫指针对某一领域根据特定的要求实现爬虫程序，住区需要的数据(垂直爬虫) 设计思路： (1).确定URL， 模拟浏览器向服务器发送请求 (2).获取响应数据并进行数据解析 (3).讲目标数据持久化到本地" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/two/" />
+<meta property="article:published_time" content="2020-04-03T14:44:50+08:00" />
+<meta property="article:modified_time" content="2020-04-03T14:44:50+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="关于爬虫"/>
+<meta name="twitter:description" content="爬虫简介 1. 爬虫概念 爬虫，又称网页蜘蛛或网络机器人。 爬虫是 模拟人操作客户端(浏览器，APP) 向服务器发起网络请求 抓取数据的自动化程序或脚本 说明： 1.模拟：用爬虫程序伪装出人的行为，避免被服务器识别为爬虫 2.客户端：浏览器，APP都可以实现人与服务器之间交互行为，应用客户端从服务器获取数据 3.自动化：数据量较小的时候可以人工获取，但往往在公司中爬取量在百万、千万条的所以程序要自动化
+爬虫语言：PHP, C/C&#43;&#43;, Java, python, GOLang 对比： PHP：并发能力差，对多进程和多线程，数据量较大爬虫效率较低 C/C&#43;&#43;：语言效率高，但学习成本高，对程序员的技术能力要求较高，所以目前还停留在研究层面，市场需求小 Java：python爬虫的主要竞争对手，但由于Java语言特点，代码臃肿，代码量大，维护成本重构成本高，开发效率底，但目前市场上岗位需求比较旺盛 python：语法简单，学习成本低，对新手比较友好，python语言良好的生态，大量库和框架的支持是的python爬虫目前处于爬虫圈的主导地位
+2.爬虫分类 1.通用爬虫：（搜索引擎） 实列：百度、搜狗、Google的搜索引擎 功能：访问网页 -&gt; 抓取数据 -&gt; 数据处理 -&gt; 提供检索服务 工作流： 1.给定一个起始url，存于爬取列队中 2.爬虫程序从队列中取出url，爬取数据 3.解析爬取数据，获取网页内所有URL，放入爬取队列 4.重复第二个步骤 使搜索引擎获取网站链接： 1.主动将URL提交给搜索引擎（https://ziyuan.baidu.com/linksubmit/url） 2.在其他热门网站设置友情链接 3.百度和DNS服务商合作，收录新网站 网站排名（SEO）： 1.根据PageRank值进行排名（流量、点击率） 2.百度竞价排名，钱多就靠前 缺点： 1.抓取内容多数无用 2.无法精准获取数据 协议： robots协议 &ndash;&gt; 约定那些内容允许哪些爬虫抓取 1.无需遵守，该协议适用于通用爬虫，而我们写的是聚焦爬虫 2.查看方法：网站url/robots.txt， 如https://www.baidu.com/robots.txt
+2.聚焦爬虫 概念：聚焦爬虫指针对某一领域根据特定的要求实现爬虫程序，住区需要的数据(垂直爬虫) 设计思路： (1).确定URL， 模拟浏览器向服务器发送请求 (2).获取响应数据并进行数据解析 (3).讲目标数据持久化到本地"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+
+
+
+  </head>
+
+  
+  <body>
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = '\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          关于爬虫
+          <div class="sub header">@  · Friday, Apr 3, 2020 · 1 minute read · Update at Apr 3, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><h1 id="爬虫简介">爬虫简介</h1>
+<h2 id="1-爬虫概念">1. 爬虫概念</h2>
+<p>爬虫，又称网页蜘蛛或网络机器人。
+爬虫是 模拟人操作客户端(浏览器，APP)  向服务器发起网络请求   抓取数据的自动化程序或脚本
+说明：
+1.模拟：用爬虫程序伪装出人的行为，避免被服务器识别为爬虫
+2.客户端：浏览器，APP都可以实现人与服务器之间交互行为，应用客户端从服务器获取数据
+3.自动化：数据量较小的时候可以人工获取，但往往在公司中爬取量在百万、千万条的所以程序要自动化</p>
+<p>爬虫语言：PHP, C/C++, Java, python, GOLang
+对比：
+PHP：并发能力差，对多进程和多线程，数据量较大爬虫效率较低
+C/C++：语言效率高，但学习成本高，对程序员的技术能力要求较高，所以目前还停留在研究层面，市场需求小
+Java：python爬虫的主要竞争对手，但由于Java语言特点，代码臃肿，代码量大，维护成本重构成本高，开发效率底，但目前市场上岗位需求比较旺盛
+python：语法简单，学习成本低，对新手比较友好，python语言良好的生态，大量库和框架的支持是的python爬虫目前处于爬虫圈的主导地位</p>
+<h2 id="2爬虫分类">2.爬虫分类</h2>
+<h4 id="1通用爬虫搜索引擎">1.通用爬虫：（搜索引擎）</h4>
+<p>实列：百度、搜狗、Google的搜索引擎
+功能：访问网页 -&gt; 抓取数据 -&gt; 数据处理 -&gt; 提供检索服务
+工作流：
+1.给定一个起始url，存于爬取列队中
+2.爬虫程序从队列中取出url，爬取数据
+3.解析爬取数据，获取网页内所有URL，放入爬取队列
+4.重复第二个步骤
+使搜索引擎获取网站链接：
+1.主动将URL提交给搜索引擎（https://ziyuan.baidu.com/linksubmit/url）
+2.在其他热门网站设置友情链接
+3.百度和DNS服务商合作，收录新网站
+网站排名（SEO）：
+1.根据PageRank值进行排名（流量、点击率）
+2.百度竞价排名，钱多就靠前
+缺点：
+1.抓取内容多数无用
+2.无法精准获取数据
+协议： robots协议 &ndash;&gt; 约定那些内容允许哪些爬虫抓取
+1.无需遵守，该协议适用于通用爬虫，而我们写的是聚焦爬虫
+2.查看方法：网站url/robots.txt， 如https://www.baidu.com/robots.txt</p>
+<h4 id="2聚焦爬虫">2.聚焦爬虫</h4>
+<p>概念：聚焦爬虫指针对某一领域根据特定的要求实现爬虫程序，住区需要的数据(垂直爬虫)
+设计思路：
+(1).确定URL， 模拟浏览器向服务器发送请求
+(2).获取响应数据并进行数据解析
+(3).讲目标数据持久化到本地</p>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+          <a class="ui label">No Tags</a>
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+    </div>
+
+    <h1 class="ui medium header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    </h1>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2020 我的博客</p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = '\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>
